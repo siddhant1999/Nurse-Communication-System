@@ -10,19 +10,26 @@ Kensington Gardens is a long-term care home housing residents majority of whom a
 * The system does not prevent multiple staffers from responding to the same request, preventing staff answering other requests
 
 The Wrist Pager is a solution to the aforementioned problem. This post outlines the functionality of the Wrist Pager and the design process.
-The Wrist Pager is a device worn by the staffers which receives wireless alerts via bluetooth when a service button is pressed in a resident’s room. When the call is ‘accepted’, it is removed from other pagers, and the needs of the residents are tended to. The Wrist Pager reduces the average response time by addressing several of the issues faced by the current system:
-Residents are notified when help is coming via a speaker
-Staffers are notified of requests via the wrist pager, so they do not have to physically walk to the ticker for the room number
-Allows for staff communication, preventing multiple staffers from answering the same call
-Unqualified staffers can reject a call and respond to the next call in the queue
 
+The Wrist Pager is a device worn by the staffers which receives wireless alerts via Bluetooth when a service button is pressed in a resident’s room. When the call is ‘accepted’, it is removed from other pagers, and the needs of the residents are tended to.
 
-### Discrete Components
-* Bluetooth Wrist Pager with Accept/Reject
-* Speaker and 3 button resident interface
+If a staffer requires assistance at any point they may hold down both buttons and notify other staffers that their assistance is required.
+
+The Wrist Pager reduces the average response time by a factor 8 by addressing several of the issues faced by the current system:
+* Residents are notified when help is coming via a speaker
+* Staffers are notified of requests via the wrist pager, so they do not have to physically walk to the ticker for the room number
+* Allows for staff communication, preventing multiple staffers from answering the same call
+* Unqualified staffers can reject a call and respond to the next call in the queue
+* Further assistance can be requested
+
+For more information on the triage of different calls refer to the 3 flowcharts that outline this process.
+
+### Discrete Devices
+* Wrist Pager: Bluetooth Wrist Pager with Accept/Reject buttons
+* Caller: Speaker and 3 button resident interface
 * Hub to connect devices in a network (not developed for the prototype here)
 
-#### Caller
+#### Caller (resident side)
 * 3 LED lights (red, yellow, green)
 * 3 pushbutton switches
 * HC-12 bluetooth transmitter
@@ -35,12 +42,12 @@ Unqualified staffers can reject a call and respond to the next call in the queue
 * Vibration motor
 * Power source
 
-#### Wrist Pager
+#### Wrist Pager (staffer side)
 * 2 LED lights (red, green)
 * 2 long pushbutton switches
-* 3D printed enclosure with back panel
+* [3D printed enclosure with back panel](https://github.com/siddhant1999/Nurse-Communication-System/blob/master/enclosure%20prototype.stl) 
 * 1.44" color TFT display (ILI9163C)
-* HC-12 bluetooth transmitter
+* HC-12 Bluetooth transmitter
 * 16 MHz ocsillating crystal
 * 2 22pF capacitors
 * Protoboard
@@ -52,31 +59,43 @@ Unqualified staffers can reject a call and respond to the next call in the queue
 * Ample Wiring
 * Breadboard
 
-### How it's made
+### How it's Made
 
 #### Caller
+The set up for the caller is fairly straightforward. We have included the schematic here for you to follow. The corresponding software for the ATTINY85 is [here](https://github.com/siddhant1999/Nurse-Communication-System/blob/master/Caller%20ATTINY.ino)
+Follow [this](https://www.instructables.com/id/Learn-How-to-Use-the-ATtiny85-in-UNDER-4-Minutes/) tutorial on how to configure an ATTINY85. Forgetting to load the bootloader is common error you want to avoid.
+
+##### Schematic
 `schematic here`
 
 #### Wrist Pager
-3D print the outside enclosure (find STL file above)
-The communication between the two bluetooth controllers can be difficult to get working
-Ensure that the RXD and TXD communication work on your Arduino controller before proceeeding
-This can be verified by connecting the TXD of one ardunio to the RXD on the other and vice versa.
-Given a serial input from one computer you should see the same message apprear on the other
-If the communication is successful but the correct characters are not appearing on the second Serial Monitor ensure that bost Serial Monitors are operating at the same baud rate (recommended 9600)
+##### Enclosure
+3D print [the outside enclosure] (https://github.com/siddhant1999/Nurse-Communication-System/blob/master/enclosure%20prototype.stl) in standard PLA with a minimum 0.15mm line height. Since the design does not assume the size or location of your buttons, you will need to either:
+* edit the STL file to include holes or
+* carefully drill the holes in afterwards
 
-Once you have ensured successful communication do the same by connecting each Arduino to a HC-12 transmitter
-If there are communication errors: solder the wires into the appropriate terminals
-The serial communication is easily interupted by slight flucuations in power
+##### Bluetooth Communications
+The communication between the two bluetooth controllers is the bedrock of the system and can be difficult to get working. The RXD and TXD pins on the Arduino are used for serial communication. Use these pins with the H-C12 Bluetooth transmitters with 2 Arduninos to establish a connection. [HC-12 Setup](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-12-long-range-wireless-communication-module/)
 
+Given a serial input from one Ardunio you should see the same message appear in the serial monitor of the other.If the communication is successful but the correct characters are not appearing on the second Serial Monitor ensure that both Serial Monitors are operating at the same baud rate (recommended: `9600`)
 
-Ensure that you have all of the necessary dependancies installed the TFT screen
+If there are communication errors: solder the wires into the appropriate terminals. Faulty wiring is often the cause or failure since the serial communication is easily interupted by slight flucuations in power.
 
-Citations
-How to use bluetooth
-the LCD video
-TFT packages
-How to use ATMEGA328 as an Arduino
+##### LED Screen
+Ensure that you have all of the necessary dependancies installed the TFT screen and follow the following video on how to correctly wire the [TFT screen](https://www.youtube.com/watch?v=DSYB6sWGemU&t=77s).
+
+###### Screen Dependancies
+`<SPI.h>`
+`<Adafruit_GFX.h>`
+`<TFT_ST7735.h>`
+`<avr/pgmspace.h>`
+
+##### ATMEGA328
+Since the Wrist Pager needs to small and portable we can't put an entire Ardunio in there. The great thing about Ardunio is how easy it makes testing and debugging. Thus we will use the microcontroller of an Ardunio Uno without the bulk of a board and pins. In order to configure the ATMEGA328 refer to this [info page](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard) by Arduino.
+
+##### Schematic
+
+`schematic here`
 
 What I need:
 I need to create a schematic for the watch and the hub
