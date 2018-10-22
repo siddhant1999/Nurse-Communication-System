@@ -12,8 +12,8 @@ Kensington Gardens is a long-term care home housing residents majority of whom a
 The Wrist Pager is a solution to the aforementioned problem. This post outlines the functionality of the Wrist Pager and the design process.
 
 
-[![Demo](http://img.youtube.com/vi/hHtFfm6M06w/0.jpg)](http://www.youtube.com/watch?v=hHtFfm6M06w)
-![](images/IMG_0940?raw=true)
+[![Demo](http://img.youtube.com/vi/hHtFfm6M06w/0.jpg)](http://www.youtube.com/watch?v=hHtFfm6M06w "Video Title")
+![](images/IMG_0940.jpg?raw=true)
 ![](images/IMG_0949?raw=true)
 ![](images/IMG_0950?raw=true)
 ![](images/IMG_0951?raw=true)
