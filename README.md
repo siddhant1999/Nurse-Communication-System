@@ -14,20 +14,6 @@ The Wrist Pager is a solution to the aforementioned problem. This post outlines 
 
 [![Demo](http://img.youtube.com/vi/hHtFfm6M06w/0.jpg)](http://www.youtube.com/watch?v=hHtFfm6M06w "Video Title")
 
-![](images/IMG_0940.JPG?raw=true)
-
-![](images/IMG_0949.JPG?raw=true)
-
-![](images/IMG_0950.JPG?raw=true)
-
-![](images/IMG_0951.JPG?raw=true)
-
-![](images/IMG_0954.JPG?raw=true)
-
-![](images/IMG_0956.JPG?raw=true)
-
-![](images/IMG_0957.JPG?raw=true)
-
 
 
 The Wrist Pager is a device worn by the staffers which receives wireless alerts via Bluetooth when a service button is pressed in a resident’s room. When the call is ‘accepted’, it is removed from other pagers, and the needs of the residents are tended to.
@@ -84,7 +70,7 @@ For more information on the triage of different calls refer to the 3 flowcharts 
 The set up for the caller is fairly straightforward. We have included the schematic here for you to follow. The corresponding software for the ATTINY85 is [here](https://github.com/siddhant1999/Nurse-Communication-System/blob/master/Caller%20ATTINY.ino)
 Follow [this](https://www.instructables.com/id/Learn-How-to-Use-the-ATtiny85-in-UNDER-4-Minutes/) tutorial on how to configure an ATTINY85. Forgetting to load the bootloader is common error you want to avoid.
 
-##### Schematic
+##### Full Schematic
 `schematic here`
 
 #### Wrist Pager
@@ -112,7 +98,7 @@ Ensure that you have all of the necessary dependancies installed the TFT screen 
 ##### ATMEGA328
 Since the Wrist Pager needs to small and portable we can't put an entire Ardunio in there. The great thing about Ardunio is how easy it makes testing and debugging. Thus we will use the microcontroller of an Ardunio Uno without the bulk of a board and pins. In order to configure the ATMEGA328 refer to this [info page](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard) by Arduino.
 
-##### Schematic
+##### Full Schematic
 
 `schematic here`
 
@@ -137,3 +123,19 @@ Remember to also go through ArduinoISP
 Remember to show how the files are compressed and vectorized
 How does the screen work
 Also include the flowchart
+
+
+![](images/IMG_0940.JPG?raw=true)
+
+![](images/IMG_0949.JPG?raw=true)
+
+![](images/IMG_0950.JPG?raw=true)
+
+![](images/IMG_0951.JPG?raw=true)
+
+![](images/IMG_0954.JPG?raw=true)
+
+![](images/IMG_0956.JPG?raw=true)
+
+![](images/IMG_0957.JPG?raw=true)
+
