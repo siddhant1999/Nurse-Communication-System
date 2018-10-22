@@ -13,13 +13,21 @@ The Wrist Pager is a solution to the aforementioned problem. This post outlines 
 
 
 [![Demo](http://img.youtube.com/vi/hHtFfm6M06w/0.jpg)](http://www.youtube.com/watch?v=hHtFfm6M06w "Video Title")
-![](images/IMG_0940.jpg?raw=true)
-![](images/IMG_0949?raw=true)
-![](images/IMG_0950?raw=true)
-![](images/IMG_0951?raw=true)
-![](images/IMG_0954?raw=true)
-![](images/IMG_0956?raw=true)
-![](images/IMG_0957?raw=true)
+
+![](images/IMG_0940.JPG?raw=true)
+
+![](images/IMG_0949.JPG?raw=true)
+
+![](images/IMG_0950.JPG?raw=true)
+
+![](images/IMG_0951.JPG?raw=true)
+
+![](images/IMG_0954.JPG?raw=true)
+
+![](images/IMG_0956.JPG?raw=true)
+
+![](images/IMG_0957.JPG?raw=true)
+
 
 
 The Wrist Pager is a device worn by the staffers which receives wireless alerts via Bluetooth when a service button is pressed in a resident’s room. When the call is ‘accepted’, it is removed from other pagers, and the needs of the residents are tended to.
