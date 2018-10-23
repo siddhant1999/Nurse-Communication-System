@@ -101,6 +101,8 @@ Since the Wrist Pager needs to small and portable we can't put an entire Ardunio
 ##### Full Schematic
 
 `schematic here`
+![](images/jtag-wiring-diagram-usb-wiring-wiring-diagram-odicis.jpg?raw=true)
+![](images/circuit_board.png?raw=true)
 
 What I need:
 I need to create a schematic for the watch and the hub
