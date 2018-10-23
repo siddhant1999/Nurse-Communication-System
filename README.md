@@ -75,7 +75,7 @@ Follow [this](https://www.instructables.com/id/Learn-How-to-Use-the-ATtiny85-in-
 
 #### Wrist Pager
 ##### Enclosure
-3D print [the outside enclosure] (https://github.com/siddhant1999/Nurse-Communication-System/blob/master/enclosure%20prototype.stl) in standard PLA with a minimum 0.15mm line height. Since the design does not assume the size or location of your buttons, you will need to either:
+3D print [the outside enclosure](https://github.com/siddhant1999/Nurse-Communication-System/blob/master/enclosure%20prototype.stl) in standard PLA with a minimum 0.15mm line height. Since the design does not assume the size or location of your buttons, you will need to either:
 * edit the STL file to include holes or
 * carefully drill the holes in afterwards
 
